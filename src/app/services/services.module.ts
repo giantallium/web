@@ -144,12 +144,15 @@ export function initFactory(): Function {
     return async () => {
         await (storageService as HtmlStorageService).init();
         const isDev = platformUtilsService.isDev();
+        console.log(process.env.ENV_CONFIG);
+        const envConfig = JSON.parse(process.env.ENV_CONFIG);
+        console.log(envConfig);
 
         if (isDev || platformUtilsService.isSelfHost()) {
             environmentService.baseUrl = window.location.origin;
         } else {
-            environmentService.notificationsUrl = 'https://notifications.bitwarden.com';
-            environmentService.enterpriseUrl = 'https://portal.bitwarden.com';
+            environmentService.notificationsUrl = envConfig['proxyNotifications'];
+            environmentService.enterpriseUrl = envConfig['proxyPortal'];
         }
 
         apiService.setUrls({
