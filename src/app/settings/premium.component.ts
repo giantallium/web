@@ -27,7 +27,8 @@ export class PremiumComponent implements OnInit {
     @ViewChild(TaxInfoComponent) taxInfoComponent: TaxInfoComponent;
 
     canAccessPremium = false;
-    selfHosted = false;
+//    selfHosted = false;
+    selfHosted = true;
     premiumPrice = 10;
     storageGbPrice = 4;
     additionalStorage = 0;

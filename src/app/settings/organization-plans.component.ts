@@ -50,7 +50,8 @@ export class OrganizationPlansComponent implements OnInit {
     @Output() onCanceled = new EventEmitter();
 
     loading: boolean = true;
-    selfHosted: boolean = false;
+//    selfHosted: boolean = false;
+    selfHosted: boolean = true;
     ownedBusiness: boolean = false;
     premiumAccessAddon: boolean = false;
     additionalStorage: number = 0;

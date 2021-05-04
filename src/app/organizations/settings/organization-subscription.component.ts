@@ -31,7 +31,8 @@ export class OrganizationSubscriptionComponent implements OnInit {
     showDownloadLicense = false;
     showChangePlan = false;
     sub: OrganizationSubscriptionResponse;
-    selfHosted = false;
+//    selfHosted = false;
+    selfHosted = true;
 
     cancelPromise: Promise<any>;
     reinstatePromise: Promise<any>;

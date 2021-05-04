@@ -12,7 +12,8 @@ import { TokenService } from 'jslib/abstractions/token.service';
     templateUrl: 'navbar.component.html',
 })
 export class NavbarComponent implements OnInit {
-    selfHosted = false;
+//    selfHosted = false;
+    selfHosted = true;
     name: string;
     email: string;
 

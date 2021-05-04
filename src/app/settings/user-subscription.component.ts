@@ -24,7 +24,8 @@ export class UserSubscriptionComponent implements OnInit {
     showAdjustStorage = false;
     showUpdateLicense = false;
     sub: SubscriptionResponse;
-    selfHosted = false;
+//    selfHosted = false;
+    selfHosted = true;
 
     cancelPromise: Promise<any>;
     reinstatePromise: Promise<any>;
